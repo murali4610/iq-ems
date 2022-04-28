@@ -1,6 +1,15 @@
 package com.createiq.model;
 
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Setter
+@NoArgsConstructor
 public class Address {
+	
 	private int id;
 	private String name;
 	public Address(int id, String name) {
@@ -8,22 +17,6 @@ public class Address {
 		this.id = id;
 		this.name = name;
 	}
-	public Address() {
-		super();
-	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	
 	
 
 }
