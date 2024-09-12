@@ -7,6 +7,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
+import com.createiq.model.Address;
 import com.createiq.model.Employee;
 
 public class FetchTest {
@@ -21,12 +22,12 @@ public class FetchTest {
 	    Employee emp1=(Employee)session1.load(Employee.class,10);    
 	    System.out.println(emp1.getId()+" "+emp1.getName()+" "+emp1.getSalary());    
 	    session1.close();    
-	        
+	        Address address=new Address(10, "obull");
 	    Session session2=factory.openSession();    
 	    Employee emp2=(Employee)session2.load(Employee.class,11);    
 	    System.out.println(emp2.getId()+" "+emp2.getName()+" "+emp2.getSalary());    
 	    session2.close();    
-	        
+	      
 	}    
 
 }
